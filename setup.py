@@ -11,5 +11,6 @@ setup(
             'dash-core-components==0.42.0',
             'dash-table==3.1.11',
             'scikit-learn',
-            'numpy'],
+            'numpy',
+            'jupyter'],
 )
