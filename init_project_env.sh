@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#! /bin/bash
 
 pip install virtualenv
 virtualenv venv
