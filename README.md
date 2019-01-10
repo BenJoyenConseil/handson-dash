@@ -60,7 +60,7 @@ into an interactive web applictation
 
         jupyter notebook
 
-2. Move existing charts into [app.py](app.py)
+2. Move existing charts into [app.py](app_solution.py)
 
     For example: to plot a Scatter trace with Dash, see [dcc.Graph](https://dash.plot.ly/dash-core-components)
     
