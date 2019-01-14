@@ -72,14 +72,12 @@ into an interactive web applictation
 
 *Layout*
 
-    app.layout = html.Div([
-        html.Div(className="container-fluid", children=[
-            html.Nav(className='navbar', children=[
-                html.H1("SVM Explorer"),
-            ]),
-            html.Div(className='row', children=[
-                # dcc.Graph ...
-            ])
+    app.layout = html.Div(className="container-fluid", children=[
+        html.Nav(className='navbar', children=[
+            html.H1("SVM Explorer"),
+        ]),
+        html.Div(className='row', children=[
+            # Graphs ...
         ])
     ])
 
@@ -90,24 +88,22 @@ into an interactive web applictation
 
 	# Panel
 	panel = html.Section( className='card', style=(dict(padding=20)), children=[
-	html.P('Dataset size'),
-	dcc.Slider(id='dataset-size',min=100, max=1000, value=500, step=100),
-	html.P('Noise'),
-	dcc.Slider(id='noise', min=0.0, max=1, value=0.3, step=0.1),
+        html.P('Dataset size'),
+        dcc.Slider(id='dataset-size',min=100, max=1000, value=500, step=100),
+        html.P('Noise'),
+        dcc.Slider(id='noise', min=0.0, max=1, value=0.3, step=0.1),
 	])
 	...
 	# Layout
-	app.layout = html.Div([
-	html.Div(className="container-fluid", children=[
-	    html.Nav(className='navbar', children=[
-		html.H1("SVM Explorer"),
-	    ]),
-	    html.Div(className='row', children=[
-		html.Div(id='graphs', className="col-10"),
-		html.Div(className='col-2', children=panel)
-	    ])
-	])
-])
+	app.layout = html.Div(className="container-fluid", children=[
+        html.Nav(className='navbar', children=[
+            html.H1("SVM Explorer"),
+        ]),
+        html.Div(className='row', children=[
+            html.Div(id='graphs', className="col-10"),
+            html.Div(className='col-2', children=panel)
+        ])
+    ])
 
 5. Add controls for model's parameter (kernel, gamma, C)
 
